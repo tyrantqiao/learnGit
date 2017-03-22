@@ -74,25 +74,31 @@ function calculate() {
     var generateMath = "<li><div class='div-inLine'>" + matrixText + "</div>" + "<div class='div-inLine'>" + "ÔËËã¹ý³Ì£º    ";
     //alert("xx"+dataArr[1][1]);  //here's the point this is the one dimension arr // completed
     // fucking "2" is a string not a number!!!!!!!!!!!!!!
-    // because the switch cannot use the term of number>number as one of the cases;
     var fuckSwitch = row;
-    if(fuckSwitch==2){
-        var result = crossMultiplication(dataArr);
-        generateMath += dataArr[0][0] + "*" + dataArr[1][1] + "-" + dataArr[1][0] + "*" + dataArr[0][1] + "=" + result;
-    }else if(fuckSwitch==3){
-        var result = threeDegreeMatrix(dataArr);
-        generateMath += "the thirdDegreeMatrix's value" + " =" + result;
-    }else if(fuckSwitch>=4){
+    switch (fuckSwitch) {
+        case 2: {
+            var result = crossMultiplication(dataArr);
+            generateMath += dataArr[0][0] + "*" + dataArr[1][1] + "-" + dataArr[1][0] + "*" + dataArr[0][1] + "=" + result;
+            break;
+        }
+        case 3: {
+            var result = threeDegreeMatrix(dataArr);
+            generateMath += "the thirdDegreeMatrix's value" + " =" + result;
+            break;
+        }
+        case 4: {
             //var test = 1;
             //alert(test+=Math.pow(-1,3)*3*2);
-        var result=0;
-        for (var c = 0; c < fuckSwitch; c++) {
-            var stepByStep = dataArr[0][c] * detMatrix(0, c, dataArr, fuckSwitch) * Math.pow(-1, c + 1);
-            result += stepByStep;
-            generateMath += "<div class='div-inLine'>" + dataArr[0][c] + "*" + showMatrix(createChildMatrix(0, c, dataArr, fuckSwitch))+"="+stepByStep+"</div>";
+            var result=0;
+            for (var c = 0; c < fuckSwitch; c++) {
+                var stepByStep = dataArr[0][c] * detMatrix(0, c, dataArr, fuckSwitch) * Math.pow(-1, c + 1);
+                result += stepByStep;
+                generateMath += "<div class='div-inLine'>" + dataArr[0][c] + "*" + showMatrix(createChildMatrix(0, c, dataArr, fuckSwitch))+"="+stepByStep+"</div>";
+            }
+            generateMath += "the " + fuckSwitch + "degrees' matrix value is equal to" + result;
+            break;
         }
-        generateMath += "the " + fuckSwitch + "degrees' matrix value is equal to" + result;
-      }
+    }
     generateMath += "</div></li>";
     container.innerHTML = container.innerHTML.concat(generateMath);
 }
