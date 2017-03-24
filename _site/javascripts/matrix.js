@@ -1,9 +1,9 @@
 // JavaScript source code
 var dataArr;
 
-function paintTable() {
-    var row = parseInt($("#cardinal-rows").val());
-    var column = parseInt($("#cardinal-columns").val());
+function paintTable(rows,columns) {
+    var row = parseInt(rows);
+    var column = parseInt(columns);
     alert("row:" + row + " column:" + column);
             
     dataArr=new Array(row);
@@ -71,10 +71,13 @@ function calculate() {
     alert(row + " " + column + " ");
 
     var matrixText = showMatrix(dataArr);
-    var generateMath = "<li><div class='div-inLine'>" + matrixText + "</div>" + "<div class='div-inLine'>" + "ÔËËã¹ý³Ì£º    ";
-    //alert("xx"+dataArr[1][1]);  //here's the point this is the one dimension arr // completed
+    var generateMath = "<li><div class='div-inLine'>" + matrixText + "</div>" + "<div class='div-inLine'>";
+
+    //alert("xx"+dataArr[1][1]);  //here's the point this is the one dimension arr
     // fucking "2" is a string not a number!!!!!!!!!!!!!!
     // because the switch cannot use the term of number>number as one of the cases;
+    //cannot use the utf-8
+
     var fuckSwitch = row;
     if(fuckSwitch==2){
         var result = crossMultiplication(dataArr);

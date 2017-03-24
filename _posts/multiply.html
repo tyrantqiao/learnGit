@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>multiply</title>
+    <script src=""></script>
+    <style>
+        input.text{
+            width:5px;
+        }
+    </style>
+</head>
+<body>
+    <b>calculate multiply</b>
+    <div id="left-table-div"></div>
+    <div id="right-table-div"></div>
+
+    <form name="multiply-form" method="post" action="">
+        left-rows
+        <input type="text" value="2" id="left-rows" />
+        left-columns
+        <input type="text" value="2" id="left-columns" />
+        right-rows
+        <input type="text" value="2" id="right-rows" />
+        right-columns
+        <input type="text" value="2" id="right-columns" />
+
+        <input type="button" value="table" onclick="paintTable()" />
+    </form>
+</body>
+</html>
