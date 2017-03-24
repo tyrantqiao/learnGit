@@ -22,7 +22,7 @@ function paintTable() {
 function generateTable(rows,columns,direction){
     var temp = "";
     temp += "<table border='1' id='"+direction+"-table'>";
-    for (var r = 0; r < row; r++) {
+    for (var r = 0; r < rows; r++) {
         temp += "<tr class='" + direction + "-tr'>";
         for (var c = 0; c < columns; c++) {
             temp += "<td class='" + direction + "-td'><input type='text' class='"+direction+"-value' /></td>";
