@@ -1,11 +1,10 @@
 // JavaScript source code
-
-var leftRows =parseInt( $("#left-rows").val());
-var leftColumns = parseInt($("#left-columns").val());
-var rightRows = parseInt($("#right-rows").val());
-var rightColumns = parseInt($("#right-columns").val());
-
 function paintTable() {
+    var leftRows = parseInt($("#left-rows").val());
+    var leftColumns = parseInt($("#left-columns").val());
+    var rightRows = parseInt($("#right-rows").val());
+    var rightColumns = parseInt($("#right-columns").val());
+
     if (leftColumns == rightRows) {
         var leftTable = "";
         var rightTable = "";
@@ -33,4 +32,3 @@ function generateTable(rows,columns,direction){
     temp += "</table>";
     return temp;
 }
-
