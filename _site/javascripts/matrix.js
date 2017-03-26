@@ -30,8 +30,8 @@ function addNumber() {
     var cols = "";
     var c = 0, r = 0;
 
-    var row = parseInt($("#cardinal-rows").val());
-    var column = parseInt($("#cardinal-columns").val());
+    var row = parseInt($("#cardinalRows").val());
+    var column = parseInt($("#cardinalColumns").val());
     alert("row:" + row + " column:" + column);
 
     //cardinalMatrix = new Array(row);
@@ -64,8 +64,8 @@ function det(arr) {
 }
 
 function calculate() {
-    var row = parseInt($("#cardinal-rows").val());
-    var column = parseInt($("#cardinal-columns").val());
+    var row = parseInt($("#cardinalRows").val());
+    var column = parseInt($("#cardinalColumns").val());
     alert(row + " " + column + " ");
 
     var matrixText = showMatrix(dataArr);
