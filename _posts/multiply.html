@@ -4,30 +4,46 @@
 <head>
     <meta charset="utf-8" />
     <title>multiply</title>
-    <script src="https://rawgit.com/tyrantqiao/learnGit/gh-pages/javascripts/multiply.js"></script>
+
     <script src="https://cdn.rawgit.com/tyrantqiao/learnGit/gh-pages/javascripts/jquery-3.1.1.js"></script>
+    <script src="https://cdn.rawgit.com/tyrantqiao/learnGit/gh-pages/javascripts/multiply.js"></script>
+
     <style>
-        input.text{
-            width:5px;
+        .text{
+            width:70px;
+        }
+        .div-inLine{
+            display:inline-table; 
+            /*-table也还可以*/
         }
     </style>
 </head>
 <body>
     <b>calculate multiply</b>
-    <div id="left-table-div"></div>
-    <div id="right-table-div"></div>
-
+    
     <form name="multiply-form" method="post" action="">
         left-rows
-        <input type="text" value="2" id="left-rows" />
+        <input  class="text" type="text" value="2" id="left-rows" />
         left-columns
-        <input type="text" value="2" id="left-columns" />
+        <input  class="text" type="text" value="2" id="left-columns" />
         right-rows
-        <input type="text" value="2" id="right-rows" />
+        <input  class="text" type="text" value="2" id="right-rows" />
         right-columns
-        <input type="text" value="2" id="right-columns" />
+        <input  class="text" type="text" value="2" id="right-columns" />
 
         <input type="button" value="table" onclick="paintTable()" />
+        <input type="button" value="addData" onclick="addData()" />
+        <input type="button" value="calculate" onclick="calculate()" />
     </form>
+    <a href="https://cdn.rawgit.com/tyrantqiao/learnGit/gh-pages/_layouts/Matrix.html">calculate matrix's value</a>
+
+    <div class="div-inLine">
+        <div id="leftTableDiv" style="float:left"></div> <div id="rightTableDiv" style="float:right"></div> 
+    </div>
+    <br />
+    <br />
+    <ol id="container" data-i="1">
+        
+    </ol>
 </body>
 </html>
