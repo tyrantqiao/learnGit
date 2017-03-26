@@ -2,7 +2,7 @@
 var dataArr;
 
 function paintTable() {
-    var row = parseInt($("cardinalRows").val());
+    var row = parseInt($("#cardinalRows").val());
     var column = parseInt($("#cardinalColumns").val());
     alert("row:" + row + " column:" + column);
 
