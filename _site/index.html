@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+    <style type="text/css">
+        table {
+            border:medium;
+            font-size: 14px;
+        }
+        input{
+            width:100px;
+        }
+        .div-inLine{
+            display:inline-block; 
+            /*-table也还可以*/
+        }
+    </style>
+        
+
+
+
+    <script src="https://cdn.rawgit.com/tyrantqiao/learnGit/gh-pages/javascripts/jquery-3.1.1.js"></script>
+    <script src="../javascripts/matrix.js"></script>
+   <!-- <script src="https://rawgit.com/tyrantqiao/learnGit/gh-pages/javascripts/matrix.js" charset="utf-8"></script>-->
+
+</head>
+<body>
+    <div>to calculate matrix</div>
+    <div>input matrix</div>
+    <br />
+    <form name="form1" method="post" action="">
+        <b>rows:</b>
+        <input  type="text" value="2" id="cardinalRows" onKeyPress="if (event.keyCode!=46 && event.keyCode!=45 && (event.keyCode<48 || event.keyCode>57)) event.returnValue=false" />
+        <b>columns:</b>
+        <input type="text" value="2" id="cardinalColumns" onKeyPress="if (event.keyCode!=46 && event.keyCode!=45 && (event.keyCode<48 || event.keyCode>57)) event.returnValue=false"  />
+        <input type="button" onclick="paintTable()" value="paint"/>
+        <input type="button" onclick="calculate()"  value="calculate" />
+        <input type="button" onclick="addNumber()"  value="addNumber"/>
+    </form>
+    <br />
+    <a href="multiply.html">to multiply matrix</a>
+    <div id="table" data-i="0"></div>
+    <ol id="container" data-i="1" >
+        
+    </ol>
+</body>
+</html>
