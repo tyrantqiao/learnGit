@@ -21,7 +21,7 @@ function paintTable() {
 
 function generateTable(rows,columns,direction){
     var temp = "";
-    temp += "<table border='1' id='"+direction+"-table'>";
+    temp += "<table border='1' class='"+direction+"-table'>";
     for (var r = 0; r < rows; r++) {
         temp += "<tr class='" + direction + "-tr'>";
         for (var c = 0; c < columns; c++) {
@@ -31,4 +31,32 @@ function generateTable(rows,columns,direction){
     }
     temp += "</table>";
     return temp;
+}
+
+function addData(direction, rows, columns) {
+    var arr = new Array(rows);
+    var tableIndex = "table." + direction + "-table";
+    var trIndex = "tr." + direction + "-tr";
+    var inputIndex = "input."+direction + "-value";
+    for (r in arr) {
+        arr(r) = new Array(columns);
+    }
+    $(tableIndex+" "+trIndex).each(function () {
+        $this = $(this);
+        $thisValue = $(this).find(inputIndex);
+        var num = parseInt($thisValue.val());
+
+        dataArr[r][c] = num;
+        cols += num + " ";
+        if (++c == column) {
+            cols += "\n";
+            r++;
+            c = 0;
+        }
+        //alert("get number:" + num );
+    });
+}
+
+function multiply() {
+
 }
